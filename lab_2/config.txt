@@ -1,0 +1,6 @@
+readerConfig = reader.txt
+executorConfig = executor.txt
+writerConfig = writer.txt
+textFile = text.txt
+codedFile = codedText.txt
+decodedFile = decodedText.txt
