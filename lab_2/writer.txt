@@ -1,1 +1,1 @@
-blockSize = 8
+blockSize = 12

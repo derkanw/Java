@@ -55,6 +55,7 @@ public class Manager
         Coding(config.GetNameTextFile(), config.GetNameCodedFile());
         writer.clear();
         Coding(config.GetNameCodedFile(), config.GetNameDecodedFile());
+        writer.clear();
 
         return RC.CODE_SUCCESS;
     }

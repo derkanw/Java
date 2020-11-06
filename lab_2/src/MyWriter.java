@@ -59,9 +59,6 @@ public class MyWriter implements IWriter
                 }
 
             }
-
-            for (Byte symbol : codedText)
-                output.write(symbol);
         }
         catch(IOException writerError)
         {
@@ -70,8 +67,23 @@ public class MyWriter implements IWriter
         return RC.CODE_SUCCESS;
     }
 
-    public void clear()
+    public RC clear()
     {
-        codedText.clear();
+        try
+        {
+            if (codedText.size() != 0)
+            {
+                for (Byte symbol : codedText)
+                    output.write(symbol);
+                codedText.clear();
+            }
+
+            return RC.CODE_SUCCESS;
+        }
+        catch (IOException writerError)
+        {
+            return RC.CODE_FAILED_TO_WRITE;
+        }
+
     }
 }
