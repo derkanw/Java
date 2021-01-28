@@ -1,0 +1,6 @@
+reader = MyReader : configs/1/reader.txt
+writer = MyWriter : configs/1/writer.txt
+textFile = text.txt
+codedFile = codedText.txt
+executors = MyExecutor : configs/1/executor.txt ;
+orderExecutors = MyExecutor ;
