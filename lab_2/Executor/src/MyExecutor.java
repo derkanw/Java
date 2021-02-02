@@ -37,8 +37,7 @@ public class MyExecutor implements IExecutor
         try (FileInputStream keyReader = new FileInputStream(keyFile))
         {
             key = new byte[(int)keyFile.length()];
-            for (int i = 0; i < keyFile.length(); i++)
-                keyReader.read(key);
+            keyReader.read(key);
         }
         catch(IOException readerError)
         {

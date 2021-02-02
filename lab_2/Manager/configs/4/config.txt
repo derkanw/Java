@@ -3,4 +3,4 @@ writer = MyWriter : configs/4/writer.txt
 textFile = text.txt
 codedFile = codedText.txt
 executors = BinaryShift : configs/4/executor_encoder.txt ; MyExecutor : configs/4/executor.txt ;
-orderExecutors = BinaryShift ; MyExecutor;
+orderExecutors = BinaryShift ; MyExecutor ;
