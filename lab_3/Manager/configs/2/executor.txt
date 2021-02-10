@@ -1,0 +1,1 @@
+keyFile = configs/2/key.txt
