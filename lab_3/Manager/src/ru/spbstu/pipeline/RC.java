@@ -1,7 +1,10 @@
 package ru.spbstu.pipeline;
 
+import java.io.IOException;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public enum RC {
 
@@ -21,7 +24,29 @@ public enum RC {
 		this.message = message;
 	}
 
-	private Logger logger = Logger.getLogger(RC.class.getName());
+	private static Logger logger = Logger.getLogger(RC.class.getName());
+
+	public static void initLogger(String filename)
+	{
+		try
+		{
+			FileHandler handler = new FileHandler(filename);
+			SimpleFormatter formatter = new SimpleFormatter();
+			handler.setFormatter(formatter);
+
+			logger.addHandler(handler);
+			logger.setUseParentHandlers(false);
+		}
+		catch(IOException error)
+		{
+			RC.CODE_FAILED_TO_WRITE.getError();
+		}
+	}
+
+	public static Logger getLogger()
+	{
+		return logger;
+	}
 
 	public void getError()
 	{

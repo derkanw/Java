@@ -1,0 +1,2 @@
+февр. 11, 2021 9:38:00 PM ru.spbstu.pipeline.RC getSuccess
+INFO: Work completed successfully

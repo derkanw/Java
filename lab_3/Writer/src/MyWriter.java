@@ -106,6 +106,8 @@ public class MyWriter implements IWriter
             if (config.getWriteBlockSize() == 0)
                 return RC.CODE_FAILED_TO_WRITE;
 
+
+
             while (codedText.size() >= config.getWriteBlockSize())
             {
                 for (int i = 0; i < config.getWriteBlockSize(); i++)
@@ -113,6 +115,7 @@ public class MyWriter implements IWriter
                     output.write(codedText.get(0));
                     codedText.remove(0);
                 }
+
             }
         }
         catch(IOException writerError)

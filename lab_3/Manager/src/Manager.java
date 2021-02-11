@@ -42,7 +42,7 @@ public class Manager
     private RC buildPipeline(String[] readerParams, String[] writerParams,
                              String[] orderExecutors)
     {
-        Logger logger = Logger.getAnonymousLogger();
+        Logger logger = RC.getLogger();
 
         reader = (IReader)builtWorker(readerParams[ConfigFile.numLiteral], logger);
         writer = (IWriter)builtWorker(writerParams[ConfigFile.numLiteral], logger);

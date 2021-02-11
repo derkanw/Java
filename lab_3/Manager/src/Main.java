@@ -4,6 +4,9 @@ public class Main
 {
     public static void main(String[] args)
     {
+        String loggerFile = "logging.txt";
+        RC.initLogger(loggerFile);
+
         ArgsValidity checker = new ArgsValidity(args);
         RC error = checker.CheckArgs();
         if (error != RC.CODE_SUCCESS)
